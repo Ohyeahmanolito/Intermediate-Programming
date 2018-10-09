@@ -11,12 +11,6 @@ package exercises;
  */
 public class Exercises {
 
-    public static void main(String[] args) {
-
-        int[] temp = {11, 12, 11, 13};
-        System.out.println(arrayEleven(temp, 0));
-    }
-
     public static int[] revArr(int[] arr) {
 
         int[] new_arr = new int[arr.length];
@@ -118,5 +112,19 @@ public class Exercises {
         }
 
         return false;
+    }
+
+    public static int fact(int n) {
+
+        if (n == 1) {
+            return 1;
+        }
+
+        return n * fact(n - 1) ;
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fact(4));
     }
 }

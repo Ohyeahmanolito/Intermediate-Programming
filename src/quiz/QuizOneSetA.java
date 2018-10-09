@@ -13,6 +13,7 @@ public class QuizOneSetA {
 
     public static void main(String[] args) {
         numberSeven();
+
     }
 
     public static void numberOne() {
@@ -90,7 +91,10 @@ public class QuizOneSetA {
                 break;
             }
             counter = 4;
+            System.out.println("infinite?");
         }
+
+        System.out.println("counter: " + counter);
     }
 
     public static void numberSix() {
@@ -106,10 +110,11 @@ public class QuizOneSetA {
 
     public static void numberSeven() {
         int sum = 1;
-        for (int counter = 1; counter < 4; counter++) 
-            sum *= 2;
+        for (int counter = 1; counter < 4; counter++) {
             sum++;
-        
+        }
+        sum *= 2;
+
         System.out.println(sum);
     }
 }
