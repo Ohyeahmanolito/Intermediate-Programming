@@ -11,10 +11,10 @@ import java.util.Scanner;
  *
  * @author ITRO
  */
-public class DemoClass {
+public class MethodReview {
 
     public static void main(String[] args) {
-//        //For method1()
+        //For method1()
 //        int x = 4;
 //        int y = 0;
 //        System.out.println("main x: " + x + " y: " + y);
@@ -34,12 +34,14 @@ public class DemoClass {
 //          For multipRet
 //        int temp = multipRet(4);
 //        System.out.println("temp: " + temp);
-//        String[] temp = {"mano", "lito"};
-//        swapVal(temp);
-//        System.out.println("Inside values of array");
-//        for (String x : temp) {
-//            System.out.println(x);
-//        }
+        String[] temp = {"mano", "lito"};
+        swapVal(temp);
+        System.out.println("Inside values of array");
+        for (String x : temp) {
+            System.out.println(x);
+        }
+//        System.out.println(fibo(0, 1, 0, 7, 0));
+
     }
 
     public static void method1(int x, int y) {
@@ -50,6 +52,7 @@ public class DemoClass {
     }
 
     public static String[] getUserInput() {
+
         Scanner sc = new Scanner(System.in);
         String[] names = new String[5];
         for (int counter = 0; counter < names.length; counter++) {
@@ -66,16 +69,28 @@ public class DemoClass {
     }
 
     public static int multipRet(int number) {
-
-        if (number < 4) {
-            return 1;
-        } else if (number == 5) {
+        int temp = 4;
+        if (number < 4) 
+            return temp;
+         else if (number == 4) 
             return 2;
-        }
+        
         return 0;
     }
 
     public static void swapVal(String[] arr) {
         arr[0] = "HAHA";
+    }
+
+    public static int fibo(int a, int b, int c, int user, int counter) {
+
+        if (counter < user - 1) {
+            c = a + b;
+            a = b;
+            b = c;
+            return fibo(a, b, c, user, counter + 1);
+        } else {
+            return a;
+        }
     }
 }

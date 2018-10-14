@@ -5,6 +5,8 @@
  */
 package exercises;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Exercises: 9-27 - 2018
@@ -120,11 +122,29 @@ public class Exercises {
             return 1;
         }
 
-        return n * fact(n - 1) ;
+        return n * fact(n - 1);
+
+    }
+
+    public static void method1(int counter, int arr[]) {
+        if (counter <= arr.length - 2) {
+            int temp = 0;
+            temp = arr[counter];
+            arr[counter] = arr[counter + 1];
+            arr[counter + 1] = temp;
+
+            method1(counter + 2, arr);
+        }
 
     }
 
     public static void main(String[] args) {
-        System.out.println(fact(4));
+        int arr[] = {1,2,3,4};
+
+        method1(0, arr);
+        System.out.println("end");
+
+        System.out.println(Arrays.toString(arr));
     }
+
 }

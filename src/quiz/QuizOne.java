@@ -9,7 +9,7 @@ package quiz;
  *
  * @author mvoctavianojr
  */
-public class QuizOneSetA {
+public class QuizOne {
 
     public static void main(String[] args) {
         numberSeven();
