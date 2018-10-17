@@ -42,10 +42,11 @@ public class InventorySystemTemplate {
      * This method should be able to edit the product count in the inventory.
      *
      * @param item product name that will be edited.
+     * @param count number of items in the inventory.
      */
-    void updateProductCount(String item) {
+    void updateProductCount(String item, int count) {
     }
-    
+
     /**
      * This method should be able to delete product in the inventory.
      *
