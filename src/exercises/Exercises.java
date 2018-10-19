@@ -48,16 +48,6 @@ public class Exercises {
         }
     }
 
-    public static int countHi(String input) {
-        if (input.length() < 2) {
-            return 0;
-        }
-        if (input.substring(0, 2).equals("hi")) {
-            return 1 + countHi(input.substring(2));
-        }
-        return countHi(input.substring(1));
-    }
-
     public static boolean contains(int[] array, int index, int check) {
         if (index < array.length) {
             if (array[index] == check) {
@@ -67,6 +57,16 @@ public class Exercises {
             }
         }
         return false;
+    }
+    
+        public static int countHi(String input) {
+        if (input.length() < 2) {
+            return 0;
+        }
+        if (input.substring(0, 2).equals("hi")) {
+            return 1 + countHi(input.substring(2));
+        }
+        return countHi(input.substring(1));
     }
 
     public static int maxVal(int[] array) {
@@ -78,7 +78,6 @@ public class Exercises {
         }
         return maxValue;
     }
-
     public static int maxVal(int[] arr, int index, int max) {
         int largest = max;
         while (index < arr.length - 1) {

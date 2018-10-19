@@ -15,4 +15,9 @@ public class Plant {
         System.out.println("Hello this is the plant class");
     }
 
+    public int add(int numb1, int numb2) {
+        int sum = numb1 + numb2;
+        return sum;
+    }
+
 }

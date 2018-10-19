@@ -12,19 +12,22 @@ package multipleClass;
 public class Animal {
 
     public static void main(String[] args) {
-        // method WITHOUT 'static'
-        Animal littleAnimal = new Animal();
+        // method WITHOUT 'static' on same class
+        Animal littleAnimal = new Animal(); //instantiation
         littleAnimal.method2();
 
-        // method WITH 'static'
-        method1();
-        Animal.method1();
+        // method WITH 'static' on same class
+        method1(1, 2);
+        Animal.method1(1, 2);
 
-        Plant littlePlant = new Plant();
+        Plant littlePlant = new Plant(); // instantiate
         littlePlant.helloPlant();
+        int temp = littlePlant.add(4, 6);
+        System.out.println("the sum is: " + temp);
+
     }
 
-    public static void method1() {
+    public static void method1(int x, int y) {
         System.out.println("method 1 here.");
     }
 
