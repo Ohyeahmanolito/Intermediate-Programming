@@ -64,7 +64,7 @@ public class ArrayExercise {
         System.out.println("BEFORE:");
         printArr(arr);
         System.out.println("");
-        
+
         int row = arr.length;
 
         for (int counter = 0; counter < arr[0].length; counter++) {
@@ -79,9 +79,11 @@ public class ArrayExercise {
 
     public static void main(String[] args) {
         int[][] arr = {{1, 2, 3, 4},
-        {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}
+                        {5, 6, 7, 8},
+                        {9, 10, 11, 12}, 
+                        {13, 14, 15, 16}
         };
 
-        exerThree(arr);
+        exerTwo(arr);
     }
 }

@@ -13,16 +13,18 @@ public class RegExDemo {
 
     public static void main(String[] args) {
 
-        String value = "cat.cat";
-        //String pattern = "[aeioumM]"; // remove specific values
-        //String pattern = "[a-f]"; // remove a-f only
-        //String pattern = "[a-zA-Z]"; // remove all letters.
-        //String pattern = "[0-9]"; //remove number.
-        //String pattern = "\\."; // remove period
-        String pattern = "."; // any one character
+        String value = "Manolito.o425ctaviano.Jr.13";
+        //String pattern = "[aeiouAEIOU]"; // remove specific values
 
-        String temp = value.replaceAll(pattern, "");
+        //String pattern = "[a-z]"; // remove a-f only
+        //String pattern = "[aeiou]"; // remove all letters.
+        //String pattern = "[a-fp-z]"; //remove number.
+        String pattern = "[.a-z]"; // remove period
+        //String pattern = "."; // any one character
+
+        String temp = value.replaceAll(pattern, "-");
         System.out.println("temp: " + temp);
+        
 
     }
 }
