@@ -15,15 +15,15 @@ import java.util.regex.Pattern;
 public class RegExDemoAdvanced {
 
     public static void main(String[] args) {
-        matcherClassDemoThree();
+        temp();
     }
 
     public static void metaCharDemo() {
         String pattern = "";
         //pattern = "\\d"; // short for [0-9]
-        //pattern = "\\w"; // short for [a-zA-Z_0-9]
-        pattern = "\\b"; // word boundary where a word character is [a-zA-Z0-9_]
-        String value = "Mano  lito.Occcctavia  no12oo3.jr";
+        pattern = ""; // short for [a-zA-Z_0-9]
+        //pattern = "\\b"; // word boundary where a word character is [a-zA-Z0-9_]
+        String value = "Mano 1";
         String temp = value.replaceAll(pattern, "-");
         System.out.println("temp: " + temp);
     }
@@ -31,20 +31,21 @@ public class RegExDemoAdvanced {
     public static void quantifierDemo() {
 
         String pattern = "";
-        //pattern = "oo*";
+        //pattern = "o*";
         //pattern = "oo";
-        //pattern = "c{2}";
+        //pattern = "c{3}";
         pattern = "li?to";
-        String value = "Mano  lito.Occcctavia  no12oo3.jr";
-        String temp = value.replaceFirst(pattern, "-");
-        //String temp = value.replaceAll(pattern, "-");
+        String value = "Mano  litoooooooooo.Occcctavia  no12oo3.jr";
+        //String temp = value.replaceFirst(pattern, "-");
+        String temp = value.replaceAll(pattern, "-");
         System.out.println("temp: " + temp);
     }
 
     public static void groupDemo() {
         String pattern = "(M.*no.* l)(ito\\.)(.*)";
+
         String value = "Mano  lito.Occcctavia  no12oo3.jr";
-        String temp = value.replaceFirst(pattern, "$1 XXX $3");
+        String temp = value.replaceAll(pattern, "$3 $1 $2");
         System.out.println(temp);
     }
 
@@ -97,6 +98,14 @@ public class RegExDemoAdvanced {
         }
 
         System.out.println(count);
+    }
+
+    public static void temp() {
+
+        String value = "HAHAHA... Wow!!! But why??? Who knows...";
+        String pattern = "[!?.]{2}";
+        System.out.println(value.replaceAll(pattern, ""));
+
     }
 
 }

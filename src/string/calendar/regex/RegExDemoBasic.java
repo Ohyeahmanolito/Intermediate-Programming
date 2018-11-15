@@ -13,18 +13,21 @@ public class RegExDemoBasic {
 
     public static void main(String[] args) {
 
-        String value = "Manolito.o425ctaviano.Jr.13";
-        String pattern = "[aeiouAEIOU]"; // remove specific values
+        String value = "ManoManolito o425c. taviano1234Mano";
+        //String pattern = "[aeiouAEIOU]"; // remove specific values
 
         //String pattern = "[a-z]"; // remove a-f only
         //String pattern = "[aeiou]"; // remove all letters.
         //String pattern = "[a-fp-z]"; //remove number.
         //String pattern = "[.a-z]"; // remove period
         //String pattern = "."; // any one character
+        //String pattern = "Mano$";
+        //System.out.println(value.replaceAll(pattern, "-"));
+        String pattern = "o";
+        String[] temp = value.split(pattern);
+        for (String x : temp) {
+            System.out.println(x);
 
-        String temp = value.replaceAll(pattern, "-");
-        System.out.println("temp: " + temp);
-        
-
+        }
     }
 }
