@@ -1,0 +1,16 @@
+5
+3
+rock rock paper
+tie
+2
+rock paper
+player2 wins
+3
+paper rock rock
+player1 wins
+3
+paper paper scissors
+player3 wins
+2
+rock scissors
+tie
