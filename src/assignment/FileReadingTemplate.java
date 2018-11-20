@@ -118,7 +118,7 @@ public class FileReadingTemplate {
 
     /**
      * TO-DO code here the logic that checks whether the result is correct or
-     * not in a game of rock-paper-scissors.
+     * not in a game of rock-paper-scissors in TestFive.txt.
      *
      * The first line of the input gives the number of test cases, T. Each T
      * contains three lines, A, B, and C. The first line, A defines the number
