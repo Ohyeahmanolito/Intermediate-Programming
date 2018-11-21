@@ -5,6 +5,9 @@
  */
 package assignment;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 /**
  *
  * @author ITRO
@@ -18,7 +21,7 @@ public class FileReadingTemplate {
 
         for (int[] row : twoDimArray) {
             for (int counter = 0; counter < row.length; counter++) {
-                System.out.print(counter + " ");
+                System.out.print(row[counter] + " ");
             }
             System.out.println("");
         }
@@ -114,7 +117,6 @@ public class FileReadingTemplate {
      */
     public int[][] readAveTwoDimArray(String path) {
 
-        
         return new int[0][0];
     }
 
@@ -164,6 +166,11 @@ public class FileReadingTemplate {
     }
 
     public static void main(String[] args) {
+        //sample
+        int[][] x = {{1, 2, 3}, {5, 4, 1}, {4,2,5}};
 
+        FileReadingTemplate temp = new FileReadingTemplate();
+
+        temp.printTwoDimArray(x);
     }
 }
