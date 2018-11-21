@@ -112,8 +112,10 @@ public class FileReadingTemplate {
      *
      * return two dimensional array.
      */
-    public void readAveTwoDimArray(String path) {
+    public int[][] readAveTwoDimArray(String path) {
 
+        
+        return new int[0][0];
     }
 
     /**
