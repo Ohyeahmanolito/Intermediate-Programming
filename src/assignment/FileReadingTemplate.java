@@ -113,11 +113,10 @@ public class FileReadingTemplate {
      *
      * @param filePathOne Path of the file that will be read.
      *
-     * return two dimensional array.
+     *
      */
-    public int[][] readAveTwoDimArray(String path) {
+    public void readAveTwoDimArray(String path) {
 
-        return new int[0][0];
     }
 
     /**
@@ -167,7 +166,7 @@ public class FileReadingTemplate {
 
     public static void main(String[] args) {
         //sample
-        int[][] x = {{1, 2, 3}, {5, 4, 1}, {4,2,5}};
+        int[][] x = {{1, 2, 3}, {5, 4, 1}, {4, 2, 5}};
 
         FileReadingTemplate temp = new FileReadingTemplate();
 
